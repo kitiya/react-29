@@ -1,4 +1,6 @@
 body {
+  margin: 0;
+  padding: 0;
   background-color: blanchedalmond;
   font-family: "Lato", sans-serif;
 }
@@ -10,4 +12,57 @@ h4,
 h5,
 h6 {
   font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* CONTAINER */
+.main-container {
+  width: 80%;
+  margin: auto;
+  background-color: rgb(244, 243, 239);
+}
+
+/* HEADER */
+header {
+  height: 5vh;
+  display: flex;
+  background: black;
+}
+.navbar {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  background-color: thistle;
+  padding: 5px;
+}
+
+.nav-item {
+  font-family: Montserrat, san-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+
+.nav-item:hover {
+  color: salmon;
+  text-decoration: underline;
+}
+
+/* PROJECT LIST */
+.project-list-container {
+  background-color: violet;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.project-list {
+  text-align: center;
+  padding: 10px;
+  background-color: turquoise;
+  border: 1px solid white;
 }
