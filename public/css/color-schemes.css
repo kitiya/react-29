@@ -1,0 +1,63 @@
+.color-scheme-kty {
+  color: #3e3f45; /* header */
+  color: #fbefd2; /* header: hover */
+  color: #4682b4; /* primary (steel blue) */
+  color: #b44682; /* hilight */
+}
+
+/* Peaches and Grapes Color Palette */
+/* https://www.color-hex.com/color-palette/86508 */
+.peaches-and-grapes {
+  color: #3e3f45;
+  color: #f4a293;
+  color: #fbefd2;
+  color: #5c967e;
+  color: #79597e;
+}
+
+/* 3. Metallic Blue, Purple, Red – Website Color Palette */
+.color-scheme-03 {
+  color: #0f2862; /* Blue Popsicle */
+  color: #9e363a; /* Redline */
+  color: #091f36; /* Purple Shadow */
+  color: #c2cad6; /* Grey Blue Leaf */
+}
+
+/* 4.Tan, pink and red color scheme */
+.color-scheme-04 {
+  color: #fff5d7; /* Ragin Beige */
+  color: #ff5e6c; /* Coral Pink */
+  color: #feb300; /* Sleuthe Yellow */
+  color: #ffaaab; /* Pink Leaf */
+}
+
+/* 9. Sunny and Calm */
+.color-scheme-09 {
+  color: #6ed3cf; /* Light Blue Green */
+  color: #9068be; /* Soft Purple */
+  color: #e1e8f0; /* Tasty Eighties Grey */
+  color: #e62739; /* Rich Red */
+}
+
+/* 22. A Sleek Modern Color Palette */
+.color-scheme-22 {
+  color: #111c30; /* Dark Blue/Purple */
+  color: #9a4d55; /* Dark Pink Makeup */
+  color: #80756b; /* Comfortable Couch Beige */
+}
+
+/* 24. A Fresh Modern Color Palette */
+.color-scheme-24 {
+  color: #1d1145; /* Deep Purple */
+  color: #0db4b9; /* Trapper Keeper Green */
+  color: #f2a1a1; /* Pink Boot */
+  color: #e76d89; /* Modern Pink Backpack */
+}
+
+/* 26. A Rusted Modern Color Palette */
+.color-scheme-26 {
+  color: #c1432e; /* Deep rusted red */
+  color: #4b6777; /* Silver head-dress */
+  color: #ce9e62; /* Rusted Gold */
+  color: #2c2c2c; /* Black for Contrast */
+}

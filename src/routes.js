@@ -6,9 +6,10 @@ import Footer from "./components/header-footer/footer";
 
 import Home from "./components/home";
 import Project from "./components/project";
-import About from "./components/about";
-import Todo from "./components/project/todo";
 import Stopwatch from "./components/project/stopwatch";
+import Todo from "./components/project/todo";
+import Game from "./components/game";
+import About from "./components/about";
 
 const Routes = () => (
   <BrowserRouter>
@@ -16,9 +17,10 @@ const Routes = () => (
     <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/project" component={Project} />
-      <Route path="/about" component={About} />
       <Route path="/project/todo" component={Todo} />
       <Route path="/project/stopwatch" component={Stopwatch} />
+      <Route exact path="/game" component={Game} />
+      <Route path="/about" component={About} />
     </Switch>
     {/* <Footer /> */}
   </BrowserRouter>

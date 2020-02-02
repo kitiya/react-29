@@ -2,8 +2,13 @@ import React from "react";
 
 const Stopwatch = () => {
   return (
-    <main className="main-container">
-      <h1>Stopwatch PAGE</h1>
+    <main className="project-container">
+      <h1>Stopwatch</h1>
+      <section className="stopwatch-wrapper">
+        <label>0ms</label>
+        <button>Start</button>
+        <button>Clear</button>
+      </section>
     </main>
   );
 };
