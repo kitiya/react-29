@@ -166,6 +166,7 @@ header {
 #basic-counter .project-header {
   color: #bdb3f6;
 }
+
 #basic-counter .btn-wrapper {
   display: flex;
   box-sizing: border-box;
@@ -193,4 +194,68 @@ header {
   border-radius: 10px;
   border: 1px solid #5d5d60;
   text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  #basic-counter .project-wrapper {
+    width: 90%;
+    background-color: skyblue;
+    padding: 50px;
+  }
+
+  #basic-counter .btn-wrapper {
+    flex-flow: column wrap;
+  }
+
+  #basic-counter .project-header {
+    color: skyblue;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #basic-counter .project-wrapper {
+    width: 90%;
+    background-color: gold;
+  }
+
+  #basic-counter .project-header {
+    color: gold;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #basic-counter .project-wrapper {
+    width: 70%;
+    background-color: palevioletred;
+  }
+
+  #basic-counter .project-header {
+    color: rgb(213, 149, 170);
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #basic-counter .project-wrapper {
+    width: 60%;
+    background-color: springgreen;
+  }
+
+  #basic-counter .project-header {
+    color: rgb(82, 255, 168);
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #basic-counter .project-wrapper {
+    width: 50%;
+    background-color: #7b68ee;
+  }
+
+  #basic-counter .project-header {
+    color: #bdb3f6;
+  }
 }

@@ -3,7 +3,15 @@ import React, { useState } from "react";
 const BasicCounter = () => {
   const [counter, setCounter] = useState(0);
 
-  const handleIncrementClick = increment => {
+  const Button = ({ clickAction, clickValue }) => {
+    return (
+      <button className="btn" onClick={() => clickAction(clickValue)}>
+        +{clickValue}
+      </button>
+    );
+  };
+
+  const incrementCounter = increment => {
     setCounter(counter + increment);
   };
 
@@ -16,18 +24,10 @@ const BasicCounter = () => {
       <h1 className="project-header">Basic Counter</h1>
       <section className="project-wrapper">
         <div className="btn-wrapper">
-          <button className="btn" onClick={() => handleIncrementClick(1)}>
-            +1
-          </button>
-          <button className="btn" onClick={() => handleIncrementClick(5)}>
-            +5
-          </button>
-          <button className="btn" onClick={() => handleIncrementClick(10)}>
-            +10
-          </button>
-          <button className="btn" onClick={() => handleIncrementClick(100)}>
-            +100
-          </button>
+          <Button clickAction={incrementCounter} clickValue={1}></Button>
+          <Button clickAction={incrementCounter} clickValue={5}></Button>
+          <Button clickAction={incrementCounter} clickValue={10}></Button>
+          <Button clickAction={incrementCounter} clickValue={100}></Button>
         </div>
         <lable>{counter}</lable>
         <button className="btn" onClick={() => handleReset(10)}>
