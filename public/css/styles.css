@@ -1,8 +1,13 @@
-body {
+* {
   margin: 0;
   padding: 0;
-  background-color: #fff;
+  border: 0;
   font-family: "Lato", sans-serif;
+}
+
+body {
+  line-height: 1;
+  background-color: #fff;
 }
 
 h1,
@@ -15,7 +20,17 @@ h6 {
 }
 
 h1 {
+  font-size: 1.75rem;
+  line-height: 2;
   color: #b44682;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.3rem;
 }
 
 a {
@@ -26,22 +41,21 @@ a {
 .main-container {
   width: 80%;
   margin: auto;
-  height: 100vh;
+  height: 93vh;
 }
 
 /* HEADER */
 header {
-  height: 5vh;
+  height: 7vh;
   display: flex;
   background: #3e3f45;
 }
 .navbar {
   margin: auto;
-  width: 100%;
+  width: 80%;
   display: flex;
   align-content: center;
-  justify-content: space-around;
-  /* background-color: thistle; */
+  justify-content: space-between;
   padding: 5px;
 }
 
@@ -49,10 +63,13 @@ header {
   font-family: Montserrat, san-serif;
   text-transform: uppercase;
   color: white;
+  font-size: 1.25em;
 }
 
-.nav-item:hover {
-  color: #fbefd2;
+.nav-item:hover,
+.nav-item:active,
+.active-nav-item {
+  color: #72ecfa;
 }
 
 /* PROJECT LIST */
@@ -73,22 +90,107 @@ header {
 
 /* PROJECT PAGE */
 .project-container {
+  background-color: #313237;
+  box-sizing: border-box;
   width: 100%;
-  height: 95vh;
-  background-color: #fa8072; /* salmon */
-  padding: 20px;
+  height: 93vh;
 }
 
-.project-container h1 {
-  margin-top: 0px;
-  display: flex;
-  justify-content: center;
+.project-header {
+  font-size: 60px;
+  text-align: center;
   color: #fff;
 }
 
-/* STOPWATCH PROJECT */
-.stopwatch-wrapper {
+.project-wrapper {
+  border: 5px solid #fff;
+  border-radius: 20px;
+  padding: 100px;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+/* ========== STOPWATCH PROJECT ========== */
+#stopwatch {
+  background-color: #313237;
+}
+#stopwatch .project-wrapper {
   display: flex;
-  justify-content: center;
-  background: yellow;
+  flex-flow: column wrap;
+  align-content: space-between;
+  border: 5px solid #72ecfa;
+  width: max-content;
+}
+
+#stopwatch .project-header {
+  color: #72ecfa;
+}
+
+#stopwatch label {
+  margin: 5px;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 60px;
+  text-align: center;
+  background-color: whitesmoke;
+  box-sizing: border-box;
+}
+
+#stopwatch .btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+#stopwatch button {
+  margin: 5px;
+  padding: 10px 20px;
+  min-width: 200px;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: 36px;
+  background: salmon;
+  color: #fff;
+}
+
+/* ========== BASIC COUNTER ========== */
+#basic-counter .project-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: stretch;
+
+  width: 50%;
+  background: #7b68ee; /* MediumSlateBlue */
+}
+
+#basic-counter .project-header {
+  color: #bdb3f6;
+}
+#basic-counter .btn-wrapper {
+  display: flex;
+  box-sizing: border-box;
+}
+
+#basic-counter .btn {
+  flex: 30%;
+
+  margin: 5px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #313237;
+  color: #fff;
+  border: 1px solid #fff;
+  font-size: 24px;
+}
+
+#basic-counter lable {
+  font-size: 60px;
+  margin: 30px 5px;
+  padding: 15px 75px;
+  color: #313237;
+  background-color: #fff8dc;
+  border-radius: 10px;
+  border: 1px solid #5d5d60;
+  text-align: center;
 }

@@ -1,22 +1,33 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
+const HeaderLink = ({ children, ...props }) => (
+  <NavLink
+    exact
+    className="nav-item"
+    activeClassName="active-nav-item"
+    {...props}
+  >
+    {children}
+  </NavLink>
+);
 
 const Header = () => {
   return (
     <header>
       <nav className="navbar">
-        <Link className="nav-item" to="/">
+        <HeaderLink className="nav-item" to="/">
           Home
-        </Link>
-        <Link className="nav-item" to="/project">
+        </HeaderLink>
+        <HeaderLink className="nav-item" to="/project">
           Project
-        </Link>
-        <Link className="nav-item" to="/game">
+        </HeaderLink>
+        <HeaderLink className="nav-item" to="/game">
           Game
-        </Link>
-        <Link className="nav-item" to="/about">
+        </HeaderLink>
+        <HeaderLink className="nav-item" to="/about">
           About
-        </Link>
+        </HeaderLink>
       </nav>
     </header>
   );
