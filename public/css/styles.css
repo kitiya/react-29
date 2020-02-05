@@ -1,7 +1,16 @@
+/* The Box Model Fix - Start */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/* The Box Model Fix - End */
+
 * {
-  margin: 0;
-  padding: 0;
-  border: 0;
   font-family: "Lato", sans-serif;
 }
 
