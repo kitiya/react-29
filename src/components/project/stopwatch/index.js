@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const Stopwatch = () => {
   const [lapse, setLapse] = useState(0);
@@ -6,8 +6,6 @@ const Stopwatch = () => {
   const [timer, setTimer] = useState(0);
 
   const handleRunClick = () => {
-    const startTime = Date.now() - lapse;
-
     if (isRunning) {
       clearInterval(timer);
     } else {

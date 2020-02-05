@@ -12,7 +12,7 @@ const Project = () => {
       <div className="project-list-container">
         <ProjectLink to="/project/basic-counter">Basic Counter</ProjectLink>
         <ProjectLink to="/project/stopwatch">Stopwatch</ProjectLink>
-        <ProjectLink to="/project/todo">Todo</ProjectLink>
+        <ProjectLink to="/project/artists">Artist</ProjectLink>
         <ProjectLink to="/project/todo">Todo</ProjectLink>
         <ProjectLink to="/project/stopwatch">Stopwatch</ProjectLink>
         <ProjectLink to="/project/todo">Todo</ProjectLink>

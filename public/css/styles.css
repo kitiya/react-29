@@ -153,18 +153,20 @@ header {
   color: #fff;
 }
 
+/* =================================== */
 /* ========== BASIC COUNTER ========== */
+/* =================================== */
 #basic-counter .project-wrapper {
   display: flex;
   flex-flow: column wrap;
   align-items: stretch;
 
   width: 50%;
-  background: #7b68ee; /* MediumSlateBlue */
+  background: #b5ace9; /* MediumSlateBlue */
 }
 
 #basic-counter .project-header {
-  color: #bdb3f6;
+  color: #fff;
 }
 
 #basic-counter .btn-wrapper {
@@ -196,19 +198,83 @@ header {
   text-align: center;
 }
 
+/* ============================= */
+/* ========== ARTISTS ========== */
+/* ============================= */
+
+#artists {
+  background: cornsilk;
+}
+#artists .banner-image {
+  width: 100%;
+  height: 30vh;
+  background: url("/images/artist/cover-elvis.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 5px auto;
+  border-bottom: 15px solid #313237;
+  box-sizing: border-box;
+}
+
+#artists h1 {
+  margin: 20px auto;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+#artists .artists-list-wrapper {
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#artists .profile-image {
+  margin: 5px;
+  padding: 0;
+  background-color: blue;
+  box-sizing: border-box;
+  min-width: 20%;
+  min-height: 250px;
+  max-height: 300px;
+  background-size: cover !important;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  display: flex;
+  /* flex: 1 1 21%; */
+  align-items: flex-end;
+  justify-content: center;
+}
+
+#artists .profile-image-header-wrapper {
+  width: 100%;
+  padding: 5px;
+  background: #31323730;
+  margin: 0;
+  display: block;
+}
+
+#artists .profile-image-header {
+  text-align: center;
+  overflow: hidden;
+  font-size: 1.75em;
+  color: #fff;
+}
+
+/* ================================= */
+/* ========== MEDIA QUERY ========== */
+/* ================================= */
 @media only screen and (max-width: 600px) {
   #basic-counter .project-wrapper {
     width: 90%;
-    background-color: skyblue;
+    background-image: linear-gradient(to bottom right, #02aab0, #a8e063);
     padding: 50px;
   }
 
   #basic-counter .btn-wrapper {
     flex-flow: column wrap;
-  }
-
-  #basic-counter .project-header {
-    color: skyblue;
   }
 }
 
@@ -216,11 +282,7 @@ header {
 @media only screen and (min-width: 600px) {
   #basic-counter .project-wrapper {
     width: 90%;
-    background-color: gold;
-  }
-
-  #basic-counter .project-header {
-    color: gold;
+    background-image: linear-gradient(to bottom right, #7b4397, #dc2430);
   }
 }
 
@@ -228,11 +290,7 @@ header {
 @media only screen and (min-width: 768px) {
   #basic-counter .project-wrapper {
     width: 70%;
-    background-color: palevioletred;
-  }
-
-  #basic-counter .project-header {
-    color: rgb(213, 149, 170);
+    background-image: linear-gradient(to bottom right, #185a9d, #43cea2);
   }
 }
 
@@ -240,11 +298,7 @@ header {
 @media only screen and (min-width: 992px) {
   #basic-counter .project-wrapper {
     width: 60%;
-    background-color: springgreen;
-  }
-
-  #basic-counter .project-header {
-    color: rgb(82, 255, 168);
+    background-image: linear-gradient(to bottom right, #614385, #516395);
   }
 }
 
@@ -252,10 +306,6 @@ header {
 @media only screen and (min-width: 1200px) {
   #basic-counter .project-wrapper {
     width: 50%;
-    background-color: #7b68ee;
-  }
-
-  #basic-counter .project-header {
-    color: #bdb3f6;
+    background-image: linear-gradient(to bottom right, #1d2671, #c33764);
   }
 }
