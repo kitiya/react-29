@@ -3,12 +3,44 @@ import ArtistsDB from "./artist-db";
 const ArtistItem = props => {
   const id = props.match.params.id;
 
-  const artists = ArtistsDB.artists;
-  const artist = artists.filter(item => {
+  const matchedArtist = ArtistsDB.artists.filter(item => {
     return item.id === Number(id);
   });
+  const artist = matchedArtist[0];
 
-  return <h1>{artist[0].name}</h1>;
+  const AlbumList = ({ albums }) => {
+    return (
+      <section className="artist-album-container">
+        {albums.map(item => {
+          return (
+            <div className="artist-album-wrapper" key={item.albumId}>
+              <h2 className="album-title">{item.title}</h2>
+              <img
+                className="album-image"
+                src={`/images/artist/albums/${item.cover}.jpg`}
+              />
+              {/* <p className="album-price">${item.price} | {item.year}</p> */}
+            </div>
+          );
+        })}
+      </section>
+    );
+  };
+
+  return (
+    <div id="artist-item">
+      <h1>{artist.name}</h1>
+      <section className="artist-bio-wrapper">
+        <img
+          className="artist-image"
+          src={`/images/artist/covers/${artist.cover}.jpg`}
+          alt="artist"
+        />
+        <p className="artist-bio">{artist.bio}</p>
+      </section>
+      <AlbumList albums={artist.albums} />
+    </div>
+  );
 };
 
 export default ArtistItem;

@@ -264,6 +264,54 @@ header {
 }
 
 /* ================================= */
+/* ========== ARTIST ITEM ========== */
+/* ================================= */
+#artist-item {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  /* background-image: linear-gradient(to bottom right, #d3cce3, #e9e4f0); */
+}
+#artist-item .artist-bio-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+#artist-item .artist-bio {
+  margin: 0 20px;
+  font-size: 20px;
+}
+
+#artist-item .artist-image {
+  max-height: 300px;
+  width: auto;
+}
+#artist-item .artist-album-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+#artist-item .artist-album-wrapper {
+  /* margin: 5px;
+  box-sizing: border-box; */
+}
+
+#artist-item .album-title {
+  overflow: hidden;
+}
+
+#artist-item .album-image {
+  border-radius: 3px;
+  border: 1px solid #aaa;
+  max-height: 250px;
+  width: auto;
+}
+
+/* ================================= */
 /* ========== MEDIA QUERY ========== */
 /* ================================= */
 @media only screen and (max-width: 600px) {
