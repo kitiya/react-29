@@ -654,6 +654,25 @@ header .navbar .active-nav-item {
   -webkit-box-shadow: 1px 0px 3px #dcb7c0;
           box-shadow: 1px 0px 3px #dcb7c0;
   padding-top: 15px;
+  overflow: auto;
+}
+
+.project-header {
+  font-weight: 500;
+}
+
+.project-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  margin: 20px auto;
+  padding: 30px;
+  width: 50%;
+  border-radius: 50px;
 }
 
 #basic-counter {
@@ -664,25 +683,10 @@ header .navbar .active-nav-item {
 
 #basic-counter .project-header {
   color: #0c5156;
-  font-weight: 500;
 }
 
 #basic-counter .project-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  margin: 20px auto;
-  padding: 30px;
-  width: 50%;
   border: 5px solid #159099;
-  border-radius: 50px;
 }
 
 #basic-counter .btn-wrapper {
@@ -735,6 +739,77 @@ header .navbar .active-nav-item {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+#stopwatch {
+  width: 100%;
+  height: 92vh;
+  margin: 0 auto;
+}
+
+#stopwatch .project-header {
+  color: #3e3f45;
+}
+
+#stopwatch .project-wrapper {
+  border: 5px solid #6e707b;
+  padding: 75px;
+}
+
+#stopwatch label {
+  margin: 5px;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 60px;
+  text-align: center;
+  background-color: white;
+  border: 1px solid white;
+}
+
+#stopwatch .btn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+}
+
+#stopwatch .btn-wrapper .btn {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 200px;
+          flex: 1 0 200px;
+  margin: 5px;
+  padding: 15px;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: 36px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#c94b4b), to(#4b134f));
+  background-image: linear-gradient(to left, #c94b4b, #4b134f);
+  color: white;
+}
+
+#stopwatch .btn-wrapper .btn:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#c94b4b), to(#4b134f));
+  background-image: linear-gradient(to right, #c94b4b, #4b134f);
+}
+
+@media (max-width: 1199px) {
+  #stopwatch .project-wrapper {
+    width: 80%;
+  }
+}
+
+@media (max-width: 767px) {
+  #stopwatch .btn-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #stopwatch .btn-wrapper .btn {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50px;
+            flex: 1 1 50px;
   }
 }
 

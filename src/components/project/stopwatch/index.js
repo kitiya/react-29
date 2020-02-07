@@ -35,10 +35,12 @@ const Stopwatch = () => {
       <section className="project-wrapper">
         <label>{lapse} s</label>
         <div className="btn-wrapper">
-          <button onClick={handleRunClick}>
+          <button className="btn" onClick={handleRunClick}>
             {isRunning ? "Pause" : "Start"}
           </button>
-          <button onClick={handleClearClick}>Clear</button>
+          <button className="btn" onClick={handleClearClick}>
+            Clear
+          </button>
         </div>
       </section>
     </main>

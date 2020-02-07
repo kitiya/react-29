@@ -5,6 +5,7 @@
   $pcolor-secondary: $secondary;
 }
 
+// project/index.html
 #projects {
   background: #e9f1f3;
   .main-container-wrapper {
@@ -46,6 +47,19 @@
   background: $color-background;
   @include boxShadow($color-white, 30%);
   padding-top: 15px;
+  overflow: auto;
+}
+.project-header {
+  font-weight: 500;
+}
+
+.project-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 20px auto;
+  padding: 30px;
+  width: 50%;
+  border-radius: 50px;
 }
 
 #basic-counter {
@@ -57,22 +71,13 @@
 
   .project-header {
     color: $pcolor-primary-dark;
-    font-weight: 500;
   }
   .project-wrapper {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: stretch;
-    margin: 20px auto;
-    padding: 30px;
-    width: 50%;
     border: 5px solid $pcolor-primary;
-    border-radius: 50px;
   }
 
   .btn-wrapper {
     display: flex;
-    // box-sizing: border-box;
   }
 
   .btn {
@@ -112,6 +117,66 @@
   @include mediaQueryBelow("xs") {
     .btn-wrapper {
       flex-direction: column;
+    }
+  }
+}
+
+#stopwatch {
+  $pcolor-primary: #c94b4b;
+  $pcolor-secondary: #4b134f;
+  $pcolor-background: lighten($pcolor-primary, 75%);
+  @include mainContainer(100%);
+
+  .project-header {
+    color: $color-dark;
+  }
+  .project-wrapper {
+    border: 5px solid lighten($color-dark, 20%);
+    padding: 75px;
+  }
+
+  label {
+    margin: 5px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 60px;
+    text-align: center;
+    background-color: $pcolor-background;
+    border: 1px solid $pcolor-background;
+  }
+
+  .btn-wrapper {
+    display: flex;
+    margin-top: 20px;
+    .btn {
+      flex: 1 0 200px;
+      margin: 5px;
+      padding: 15px;
+      border: 1px solid $pcolor-background;
+      border-radius: 10px;
+      font-size: 36px;
+      @include linearGradient2(to left, $pcolor-primary, $pcolor-secondary);
+      color: $pcolor-background;
+
+      &:hover {
+        @include linearGradient2(to right, $pcolor-primary, $pcolor-secondary);
+      }
+    }
+  }
+
+  @include mediaQueryBelow("lg") {
+    .project-wrapper {
+      width: 80%;
+    }
+  }
+
+  @include mediaQueryBelow("sm") {
+    .btn-wrapper {
+      flex-direction: column;
+
+      .btn {
+        flex: 1 1 50px;
+      }
     }
   }
 }
