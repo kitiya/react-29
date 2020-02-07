@@ -304,11 +304,6 @@ header {
   margin-top: 30px;
 }
 
-#artist-item .artist-album-wrapper {
-  /* margin: 5px;
-  box-sizing: border-box; */
-}
-
 #artist-item .album-title {
   overflow: hidden;
 }

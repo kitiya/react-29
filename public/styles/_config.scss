@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat:400,500,700&display=swap");
+
+$color-eggplant: #6c465d;
+$color-asian-rose: #a95166;
+$color-asian-orange: #eb6d3a;
+$color-gold: #e1a639;
+$color-queen-blue: #386590;
+$color-crystal-blue: #60a3b4;
+
+$color-primary: #fefefe;
+$color-secondary: $color-queen-blue;
+$color-dark: #3e3f45;
+$color-light: #fefefe;
+$color-highlight: $color-asian-rose;
+$color-background: #f7f7f7;
+$color-white: #ffffff;
+
+.color-scheme-kty {
+  color: #3e3f45; /* header */
+  color: #fbefd2; /* header: hover */
+  color: #386590; /* primary - queen blue */
+  color: #a95166; /* hilight - asian rose */
+}
+
+$font-primary: "Lato", sans-serif;
+$font-header: "Montserrat", sans-serif;
+$font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700
+);
+
+/* Set text color */
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return $color-dark;
+  } @else {
+    @return $color-light;
+  }
+}
+
+/* LAYOUT */
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+}
+
+@mixin flexSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Media Query Mixins */
+// sm: maxWidth: 500px
+// md: maxWidth: 768px
+// lg: maxWidth: 1170px
+@mixin mQuery($args...) {
+  @if length($args == 1) {
+    @media screen and (max-width: nth($args, 1)) {
+      // 1st argument
+      @content;
+    }
+  } @else if length($args == 2) {
+    @media screen and (min-width: nth($args, 1) and (max-widht: nth($args, 2))) {
+      @content;
+    }
+  }
+}
+
+@mixin sQuery($screenSize) {
+  @if $screenSize == "sm" {
+    @media screen and (max-width: 500px) {
+      @content;
+    }
+  } @else if $screenSize == "md" {
+    @media screen and (min-width: 501px) and (max-width: 768px) {
+      @content;
+    }
+  } @else if $screenSize == "lg" {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+      @content;
+    }
+  } @else if $screenSize == "xl" {
+    @media screen and (min-width: 1171px) {
+      @content;
+    }
+  }
+}
+
+/* Transition & animation */
+@mixin easeOut {
+  transition: all 0.5s ease-out;
+}
+
+@mixin fadeIn {
+  animation: fadeInFrame 0.5s linear;
+}
+
+@keyframes fadeInFrame {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@mixin scaleTransform {
+  animation: scaleFrame 0.5s linear;
+}
+
+@keyframes scaleFrame {
+  from {
+    transform: scalex(0.95);
+  }
+  to {
+    transform: scalex(1);
+  }
+}
+
+@mixin background-image($image-url) {
+  background: $image-url;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+@mixin linearGradient2($direction, $color1, $color2) {
+  background-image: linear-gradient($direction, $color1, $color2);
+}
+@mixin linearGradient3($direction, $color1, $color2, $color3) {
+  background-image: linear-gradient($direction, $color1, $color2, $color3);
+}
+
+@mixin randomLinearGradient() {
+  background-image: linear-gradient(
+    to bottom right,
+    random-color(),
+    random-color()
+  );
+}
+@function random-color() {
+  @return rgb(random(255), random(255), random(255));
+}
+
+/* BACKGROUND IMAGE 
+$show-home-image: false;
+$home-image-url: url(https://cdn.pixabay.com/photo/2016/03/17/23/07/abstract-1264071_960_720.png);
+$home-image-url: url(../images/background-images/abstract.png);
+
+@mixin background($show-image) {
+  @if $show-image {
+    &#bg-image {
+      background: $home-image-url;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+
+      &:after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: rgba($color-primary, 0.2);
+      }
+    }
+  }
+}
+*/

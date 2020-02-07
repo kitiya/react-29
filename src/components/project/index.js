@@ -7,17 +7,19 @@ const ProjectLink = children => (
 
 const Project = () => {
   return (
-    <main className="main-container">
-      <h1>PROJECT PAGE</h1>
-      <div className="project-list-container">
-        <ProjectLink to="/project/basic-counter">Basic Counter</ProjectLink>
-        <ProjectLink to="/project/stopwatch">Stopwatch</ProjectLink>
-        <ProjectLink to="/project/artists">Artist</ProjectLink>
-        <ProjectLink to="/project/todo">Todo</ProjectLink>
-        <ProjectLink to="/project/stopwatch">Stopwatch</ProjectLink>
-        <ProjectLink to="/project/todo">Todo</ProjectLink>
-        <ProjectLink to="/project/stopwatch">Stopwatch</ProjectLink>
-        <ProjectLink to="/project/todo">Todo</ProjectLink>
+    <main id="projects" className="main-container">
+      <div className="main-container-wrapper">
+        <h1>PROJECT PAGE</h1>
+        <section className="project-list-container">
+          <ProjectLink to="/project/basic-counter">Basic Counter</ProjectLink>
+          <ProjectLink to="/project/stopwatch">Stopwatch</ProjectLink>
+          <ProjectLink to="/project/artists">Artist</ProjectLink>
+          <ProjectLink to="/project/todo">TODO</ProjectLink>
+          <ProjectLink to="/project/stopwatch">TODO</ProjectLink>
+          <ProjectLink to="/project/todo">TODO</ProjectLink>
+          <ProjectLink to="/project/stopwatch">TODO</ProjectLink>
+          <ProjectLink to="/project/todo">TODO</ProjectLink>
+        </section>
       </div>
     </main>
   );

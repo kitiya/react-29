@@ -16,6 +16,7 @@ const ArtistItem = props => {
             <div className="artist-album-wrapper" key={item.albumId}>
               <h2 className="album-title">{item.title}</h2>
               <img
+                alt="album"
                 className="album-image"
                 src={`/images/artist/albums/${item.cover}.jpg`}
               />

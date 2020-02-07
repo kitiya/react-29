@@ -1,0 +1,112 @@
+@import "reset";
+@import "config";
+
+/* The Box Model Fix */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* General setup */
+* {
+  font-weight: map-get($font-weights, "regular");
+  font-family: $font-primary;
+}
+
+body {
+  line-height: 1;
+  background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 1.75rem;
+  line-height: 2;
+  color: #b44682;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* LAYOUT & CONTAINER */
+.main-container {
+  width: 100%;
+  height: 92vh;
+  margin: 0 auto;
+}
+
+/* HEADER */
+header {
+  height: 8vh;
+  display: flex;
+  box-shadow: 1px 1px 5px lighten($color-secondary, 50%);
+  .navbar {
+    @include flexSpaceBetween;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+
+    .nav-item {
+      font-family: $font-header;
+      font-weight: map-get($font-weights, medium);
+      text-transform: uppercase;
+
+      color: black;
+      font-size: 1.25em;
+
+      &:hover {
+        color: $color-secondary;
+      }
+    }
+
+    .active-nav-item {
+      color: $color-highlight;
+    }
+  }
+}
+
+#home,
+#projects,
+#game,
+#about {
+  $home-image-url: url(../images/background-images/abstract.png);
+  @include background-image($home-image-url);
+
+  .main-container-header-wrapper {
+    position: relative;
+    padding: 50px;
+    height: 100%;
+  }
+
+  .main-container-header {
+    font-size: 3em;
+    position: absolute;
+    top: 25vh;
+    right: 25vh;
+  }
+}
+
+@import "./project";
