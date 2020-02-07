@@ -1,4 +1,12 @@
+@mixin pcolor($primary, $secondary) {
+  $pcolor-primary: $primary;
+  $pcolor-primary-dark: darken($primary, 20%);
+  $pcolor-background: lighten($primary, 80%);
+  $pcolor-secondary: $secondary;
+}
+
 #projects {
+  background: #e9f1f3;
   .main-container-wrapper {
     margin: 0 auto;
     padding: 20px 0;
@@ -28,8 +36,82 @@
       @include fadeIn;
 
       &:hover {
-        @include linearGradient2(to left, #514a9d, #24c6dc);
+        @include linearGradient2(to left, darken(#514a9d, 20%), #24c6dc);
       }
+    }
+  }
+}
+
+.project-container {
+  background: $color-background;
+  @include boxShadow($color-white, 30%);
+  padding-top: 15px;
+}
+
+#basic-counter {
+  $pcolor-primary: #159099;
+  $pcolor-secondary: #0052a7;
+  $pcolor-primary-dark: darken($pcolor-primary, 15%);
+  $pcolor-background: lighten($pcolor-primary, 80%);
+  @include mainContainer(100%);
+
+  .project-header {
+    color: $pcolor-primary-dark;
+    font-weight: 500;
+  }
+  .project-wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: stretch;
+    margin: 20px auto;
+    padding: 30px;
+    width: 50%;
+    border: 5px solid $pcolor-primary;
+    border-radius: 50px;
+  }
+
+  .btn-wrapper {
+    display: flex;
+    // box-sizing: border-box;
+  }
+
+  .btn {
+    flex: 30%;
+
+    margin: 5px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    @include linearGradient2(to right, $pcolor-secondary, $pcolor-primary);
+    color: $color-light;
+    border: 1px solid $pcolor-primary;
+    font-size: 24px;
+
+    &:hover {
+      @include linearGradient2(to left, $pcolor-secondary, $pcolor-primary);
+    }
+  }
+
+  lable {
+    font-size: 60px;
+    margin: 30px 5px;
+    padding: 15px 75px;
+    color: $pcolor-primary-dark;
+    background-color: $pcolor-background;
+    border-radius: 10px;
+    border: 1px solid $pcolor-primary;
+    text-align: center;
+  }
+
+  @include mediaQueryBelow("md") {
+    .project-wrapper {
+      width: 80%;
+    }
+  }
+
+  @include mediaQueryBelow("xs") {
+    .btn-wrapper {
+      flex-direction: column;
     }
   }
 }

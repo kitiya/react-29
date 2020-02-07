@@ -9,7 +9,7 @@ const Project = () => {
   return (
     <main id="projects" className="main-container">
       <div className="main-container-wrapper">
-        <h1>PROJECT PAGE</h1>
+        <h1>List of my projects...</h1>
         <section className="project-list-container">
           <ProjectLink to="/project/basic-counter">Basic Counter</ProjectLink>
           <ProjectLink to="/project/stopwatch">Stopwatch</ProjectLink>

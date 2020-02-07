@@ -458,8 +458,9 @@ textarea {
 
 /* Set text color */
 /* LAYOUT */
-/* Media Query Mixins */
-/* Transition & animation */
+/* CUSTOM STYLES */
+/* MEDIA QUERY MIXINS */
+/* TRANSITION & ANIMATION */
 @-webkit-keyframes fadeInFrame {
   from {
     opacity: 0;
@@ -499,33 +500,6 @@ textarea {
   }
 }
 
-/* BACKGROUND IMAGE 
-$show-home-image: false;
-$home-image-url: url(https://cdn.pixabay.com/photo/2016/03/17/23/07/abstract-1264071_960_720.png);
-$home-image-url: url(../images/background-images/abstract.png);
-
-@mixin background($show-image) {
-  @if $show-image {
-    &#bg-image {
-      background: $home-image-url;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-
-      &:after {
-        content: " ";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        background: rgba($color-primary, 0.2);
-      }
-    }
-  }
-}
-*/
 /* The Box Model Fix */
 html {
   -webkit-box-sizing: border-box;
@@ -562,7 +536,7 @@ h6 {
 h1 {
   font-size: 1.75rem;
   line-height: 2;
-  color: #b44682;
+  color: #a95166;
   text-align: center;
 }
 
@@ -591,8 +565,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-shadow: 1px 1px 5px #d7e4f0;
-          box-shadow: 1px 1px 5px #d7e4f0;
+  background: #e9f1f3;
 }
 
 header .navbar {
@@ -606,53 +579,29 @@ header .navbar {
       -ms-flex-align: center;
           align-items: center;
   width: 80%;
-  margin: auto;
-  padding: 10px;
+  margin: 0px auto;
 }
 
 header .navbar .nav-item {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  text-transform: uppercase;
-  color: black;
+  padding-bottom: 3px;
+  border-bottom: 2px solid #e9f1f3;
+  color: #3e3f45;
   font-size: 1.25em;
 }
 
 header .navbar .nav-item:hover {
-  color: #386590;
+  color: #a95166;
 }
 
 header .navbar .active-nav-item {
   color: #a95166;
+  border-bottom: 2px solid;
 }
 
-#home,
-#projects,
-#game,
-#about {
-  background: url(../images/background-images/abstract.png);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-#home .main-container-header-wrapper,
-#projects .main-container-header-wrapper,
-#game .main-container-header-wrapper,
-#about .main-container-header-wrapper {
-  position: relative;
-  padding: 50px;
-  height: 100%;
-}
-
-#home .main-container-header,
-#projects .main-container-header,
-#game .main-container-header,
-#about .main-container-header {
-  font-size: 3em;
-  position: absolute;
-  top: 25vh;
-  right: 25vh;
+#projects {
+  background: #e9f1f3;
 }
 
 #projects .main-container-wrapper {
@@ -696,7 +645,121 @@ header .navbar .active-nav-item {
 }
 
 #projects .project-list-container .project-list-item:hover {
-  background-image: -webkit-gradient(linear, right top, left top, from(#514a9d), to(#24c6dc));
-  background-image: linear-gradient(to left, #514a9d, #24c6dc);
+  background-image: -webkit-gradient(linear, right top, left top, from(#2d2958), to(#24c6dc));
+  background-image: linear-gradient(to left, #2d2958, #24c6dc);
+}
+
+.project-container {
+  background: #e9f1f3;
+  -webkit-box-shadow: 1px 0px 3px #dcb7c0;
+          box-shadow: 1px 0px 3px #dcb7c0;
+  padding-top: 15px;
+}
+
+#basic-counter {
+  width: 100%;
+  height: 92vh;
+  margin: 0 auto;
+}
+
+#basic-counter .project-header {
+  color: #0c5156;
+  font-weight: 500;
+}
+
+#basic-counter .project-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin: 20px auto;
+  padding: 30px;
+  width: 50%;
+  border: 5px solid #159099;
+  border-radius: 50px;
+}
+
+#basic-counter .btn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#basic-counter .btn {
+  -webkit-box-flex: 30%;
+      -ms-flex: 30%;
+          flex: 30%;
+  margin: 5px;
+  padding: 10px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#0052a7), to(#159099));
+  background-image: linear-gradient(to right, #0052a7, #159099);
+  color: #fefefe;
+  border: 1px solid #159099;
+  font-size: 24px;
+}
+
+#basic-counter .btn:hover {
+  background-image: -webkit-gradient(linear, right top, left top, from(#0052a7), to(#159099));
+  background-image: linear-gradient(to left, #0052a7, #159099);
+}
+
+#basic-counter lable {
+  font-size: 60px;
+  margin: 30px 5px;
+  padding: 15px 75px;
+  color: #0c5156;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #159099;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  #basic-counter .project-wrapper {
+    width: 80%;
+  }
+}
+
+@media (max-width: 599px) {
+  #basic-counter .btn-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#home,
+#game,
+#about {
+  background: url(../images/background-images/abstract.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#home .main-container-header-wrapper,
+#game .main-container-header-wrapper,
+#about .main-container-header-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+#home .main-container-header,
+#game .main-container-header,
+#about .main-container-header {
+  font-size: 3em;
+  position: absolute;
+  top: 25vh;
+  right: 20vh;
 }
 /*# sourceMappingURL=style.css.map */
