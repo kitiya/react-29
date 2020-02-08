@@ -10,11 +10,11 @@ const ArtistItem = props => {
 
   const AlbumList = ({ albums }) => {
     return (
-      <section className="artist-album-container">
+      <div className="artist-album-container">
         {albums.map(item => {
           return (
             <div className="artist-album-wrapper" key={item.albumId}>
-              <h2 className="album-title">{item.title}</h2>
+              <h3 className="album-title">{item.title}</h3>
               <img
                 alt="album"
                 className="album-image"
@@ -24,13 +24,13 @@ const ArtistItem = props => {
             </div>
           );
         })}
-      </section>
+      </div>
     );
   };
 
   return (
-    <div id="artist-item">
-      <h1>{artist.name}</h1>
+    <div id="artist-item" className="project-container">
+      <h1 className="project-header">{artist.name}</h1>
       <section className="artist-bio-wrapper">
         <img
           className="artist-image"

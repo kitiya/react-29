@@ -5,6 +5,26 @@
   $pcolor-secondary: $secondary;
 }
 
+.project-container {
+  background: $color-background;
+  @include boxShadow($color-white, 30%);
+  padding-top: 15px;
+  overflow: auto;
+}
+
+.project-header {
+  font-weight: 500;
+}
+
+.project-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 20px auto;
+  padding: 30px;
+  width: 50%;
+  border-radius: 50px;
+}
+
 // project/index.html
 #projects {
   background: #e9f1f3;
@@ -41,25 +61,6 @@
       }
     }
   }
-}
-
-.project-container {
-  background: $color-background;
-  @include boxShadow($color-white, 30%);
-  padding-top: 15px;
-  overflow: auto;
-}
-.project-header {
-  font-weight: 500;
-}
-
-.project-wrapper {
-  display: flex;
-  flex-flow: column wrap;
-  margin: 20px auto;
-  padding: 30px;
-  width: 50%;
-  border-radius: 50px;
 }
 
 #basic-counter {
@@ -176,6 +177,138 @@
 
       .btn {
         flex: 1 1 50px;
+      }
+    }
+  }
+}
+
+#artists {
+  $pcolor-primary: #313237;
+  $pcolor-secondary: #4b134f;
+  $pcolor-background: lighten($pcolor-primary, 75%);
+
+  @include mainContainer(100%);
+  padding: 0px;
+
+  .banner-image {
+    @include bannerImage(url(../images/artist/cover-elvis.jpg), 30vh);
+    border-bottom: 15px solid $pcolor-primary;
+  }
+
+  .project-header {
+    margin-top: 15px;
+    color: $pcolor-secondary;
+  }
+
+  .artists-list-wrapper {
+    width: 80%;
+    margin: 20px auto;
+    @include flexCenter;
+    flex-wrap: wrap;
+
+    .profile-image {
+      margin: 5px;
+      flex: 1 0 200px;
+      min-height: 250px;
+      border: 1px solid lighten($color: $pcolor-primary, $amount: 60%);
+      border-radius: 3px;
+
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+
+      .profile-image-header-wrapper {
+        width: 100%;
+        padding: 5px;
+        background-color: $pcolor-primary;
+        opacity: 0.5;
+        margin: 0;
+
+        .profile-image-header {
+          text-align: center;
+          overflow: hidden;
+          font-size: 1.5em;
+          color: $pcolor-background;
+        }
+      }
+    }
+  }
+}
+
+#artist-item {
+  $pcolor-primary: #313237;
+  $pcolor-secondary: #4b134f;
+  $pcolor-background: lighten($pcolor-primary, 75%);
+
+  @include mainContainer(100%);
+
+  .project-header {
+    color: lighten($pcolor-secondary, 10%);
+  }
+  .artist-bio-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 20px auto;
+
+    .artist-image {
+      max-width: 250px;
+      height: auto;
+      @include imageBorder;
+    }
+
+    .artist-bio {
+      flex: 1;
+      margin-left: 20px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+  }
+
+  .artist-album-container {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .artist-album-wrapper {
+      flex: 1 0 200px;
+      text-align: center;
+      margin: 5px;
+
+      &:first-child {
+        margin-left: 0px;
+      }
+
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+    .album-title {
+      overflow: hidden;
+      padding: 5px;
+      color: lighten($pcolor-secondary, 10%);
+    }
+
+    .album-image {
+      @include imageBorder;
+      width: 100%;
+      height: auto;
+      background-size: cover;
+    }
+  }
+
+  @include mediaQueryBelow(sm) {
+    .artist-bio-wrapper {
+      flex-direction: column;
+      align-items: center;
+
+      .artist-bio {
+        margin-top: 20px;
+        margin-left: 0px;
       }
     }
   }

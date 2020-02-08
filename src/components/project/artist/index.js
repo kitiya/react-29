@@ -10,7 +10,8 @@ const artistList = artists => {
           to={`/project/artists/${item.id}`}
           className="profile-image"
           style={{
-            background: `url('/images/artist/covers/${item.cover}.jpg') no-repeat`
+            background: `url('../images/artist/covers/${item.cover}.jpg') no-repeat`,
+            backgroundSize: "cover"
           }}
         >
           <div className="profile-image-header-wrapper">
@@ -25,11 +26,9 @@ const Artists = () => {
   const artists = ArtistDB.artists;
 
   return (
-    <div id="artists">
-      <div>
-        <div className="banner-image"></div>
-        <h1>Browse the artists</h1>{" "}
-      </div>
+    <div id="artists" className="project-container">
+      <div className="banner-image"></div>
+      <h1 className="project-header">Browse the artists</h1>
       <div className="artists-list-wrapper">{artistList(artists)}</div>
     </div>
   );
