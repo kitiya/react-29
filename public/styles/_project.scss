@@ -129,10 +129,10 @@
   @include mainContainer(100%);
 
   .project-header {
-    color: $color-dark;
+    color: darken($pcolor-primary, 30%);
   }
   .project-wrapper {
-    border: 5px solid lighten($color-dark, 20%);
+    border: 5px solid $pcolor-primary;
     padding: 75px;
   }
 
