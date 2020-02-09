@@ -92,7 +92,7 @@ header {
 #game,
 #about {
   $home-image-url: url(../images/background-images/abstract.png);
-  @include background-image($home-image-url);
+  @include backgroundImage($home-image-url);
 
   .main-container-header-wrapper {
     position: relative;

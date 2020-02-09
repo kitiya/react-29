@@ -313,3 +313,89 @@
     }
   }
 }
+
+#todo-app {
+  $pcolor-primary: #159099;
+  $pcolor-secondary: #0052a7;
+  $pcolor-primary-dark: darken($pcolor-primary, 15%);
+  $pcolor-background: lighten(#ffeead, 15%);
+  @include mainContainer(100%);
+
+  .project-header {
+    color: $pcolor-primary-dark;
+  }
+  .project-wrapper {
+    margin-top: 10px;
+    border: 5px solid $pcolor-primary;
+    border-radius: 3px;
+    padding: 0px;
+    background: $pcolor-background;
+
+    .output-wrapper {
+      padding: 20px;
+
+      .todo-item-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        .todo-item {
+          flex: 1 1 auto;
+          color: $pcolor-primary-dark;
+          background-color: $pcolor-background;
+        }
+
+        .todo-item,
+        .btn {
+          font-size: 1em;
+          line-height: 1;
+          margin: 5px;
+          padding: 10px;
+          border-radius: 3px;
+          border: 1px solid $pcolor-primary;
+          vertical-align: middle;
+        }
+        .btn-wrapper {
+          display: flex;
+
+          .btn {
+            @include linearGradient2(
+              to right,
+              $pcolor-secondary,
+              $pcolor-primary
+            );
+            color: $color-light;
+
+            &:hover {
+              @include linearGradient2(
+                to left,
+                $pcolor-secondary,
+                $pcolor-primary
+              );
+            }
+          }
+        }
+      }
+    }
+
+    .line-through {
+      text-decoration: line-through;
+    }
+
+    .input-wrapper {
+      padding: 20px;
+
+      .input-label {
+        margin: 5px;
+        color: $pcolor-primary-dark;
+      }
+      .input-text {
+        border-radius: 3px;
+        border: 1px solid $pcolor-primary;
+        width: 100%;
+        margin: 5px;
+        padding: 10px;
+      }
+    }
+  }
+}

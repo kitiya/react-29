@@ -983,6 +983,98 @@ header .navbar .active-nav-item {
   }
 }
 
+#todo-app {
+  width: 100%;
+  height: 92vh;
+  margin: 0 auto;
+}
+
+#todo-app .project-header {
+  color: #0c5156;
+}
+
+#todo-app .project-wrapper {
+  margin-top: 10px;
+  border: 5px solid #159099;
+  border-radius: 3px;
+  padding: 0px;
+  background: #fffefa;
+}
+
+#todo-app .project-wrapper .output-wrapper {
+  padding: 20px;
+}
+
+#todo-app .project-wrapper .output-wrapper .todo-item-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#todo-app .project-wrapper .output-wrapper .todo-item-wrapper .todo-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  color: #0c5156;
+  background-color: #fffefa;
+}
+
+#todo-app .project-wrapper .output-wrapper .todo-item-wrapper .todo-item,
+#todo-app .project-wrapper .output-wrapper .todo-item-wrapper .btn {
+  font-size: 1em;
+  line-height: 1;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #159099;
+  vertical-align: middle;
+}
+
+#todo-app .project-wrapper .output-wrapper .todo-item-wrapper .btn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#todo-app .project-wrapper .output-wrapper .todo-item-wrapper .btn-wrapper .btn {
+  background-image: -webkit-gradient(linear, left top, right top, from(#0052a7), to(#159099));
+  background-image: linear-gradient(to right, #0052a7, #159099);
+  color: #fefefe;
+}
+
+#todo-app .project-wrapper .output-wrapper .todo-item-wrapper .btn-wrapper .btn:hover {
+  background-image: -webkit-gradient(linear, right top, left top, from(#0052a7), to(#159099));
+  background-image: linear-gradient(to left, #0052a7, #159099);
+}
+
+#todo-app .project-wrapper .line-through {
+  text-decoration: line-through;
+}
+
+#todo-app .project-wrapper .input-wrapper {
+  padding: 20px;
+}
+
+#todo-app .project-wrapper .input-wrapper .input-label {
+  margin: 5px;
+  color: #0c5156;
+}
+
+#todo-app .project-wrapper .input-wrapper .input-text {
+  border-radius: 3px;
+  border: 1px solid #159099;
+  width: 100%;
+  margin: 5px;
+  padding: 10px;
+}
+
 #home,
 #game,
 #about {

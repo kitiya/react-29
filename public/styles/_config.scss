@@ -170,7 +170,7 @@ $breakpoints: (
   }
 }
 
-@mixin background-image($image-url) {
+@mixin backgroundImage($image-url) {
   background: $image-url;
   background-attachment: fixed;
   background-repeat: no-repeat;
