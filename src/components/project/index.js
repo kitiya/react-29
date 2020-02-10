@@ -15,7 +15,7 @@ const Project = () => {
           <ProjectLink to="/project/stopwatch">Stopwatch</ProjectLink>
           <ProjectLink to="/project/artists">Artist</ProjectLink>
           <ProjectLink to="/project/todo-app">To-do App</ProjectLink>
-          <ProjectLink to="/project/stopwatch">TODO</ProjectLink>
+          <ProjectLink to="/project/recipe-app">Recipe App</ProjectLink>
           <ProjectLink to="/project/todo">TODO</ProjectLink>
           <ProjectLink to="/project/stopwatch">TODO</ProjectLink>
           <ProjectLink to="/project/todo">TODO</ProjectLink>

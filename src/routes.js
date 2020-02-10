@@ -11,6 +11,7 @@ import BasicCounter from "./components/project/basic-counter";
 import Artists from "./components/project/artist";
 import ArtistItem from "./components/project/artist/artist-item";
 import TodoApp from "./components/project/todo-app";
+import RecipeApp from "./components/project/recipe-app";
 import Game from "./components/game";
 import About from "./components/about";
 
@@ -25,6 +26,7 @@ const Routes = () => (
       <Route exact path="/project/artists" component={Artists} />
       <Route path="/project/artists/:id" component={ArtistItem} />
       <Route path="/project/todo-app" component={TodoApp} />
+      <Route path="/project/recipe-app" component={RecipeApp} />
       <Route exact path="/game" component={Game} />
       <Route path="/about" component={About} />
       <Route
