@@ -8,8 +8,6 @@ const RecipeApp = () => {
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("ice cream");
 
-  //
-
   useEffect(() => {
     const requestUrl = `https://api.edamam.com/search?q=${query}&app_id=${RECIPE_APP_ID}&app_key=${RECIPE_APP_KEY}`;
 
@@ -24,7 +22,6 @@ const RecipeApp = () => {
   }, [query]);
 
   const updateSearch = e => {
-    console.log(e.target.value);
     setSearch(e.target.value);
   };
 
