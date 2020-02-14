@@ -5,7 +5,10 @@ const BasicCounter = () => {
 
   const Button = ({ clickAction, clickValue }) => {
     return (
-      <button className="btn" onClick={() => clickAction(clickValue)}>
+      <button
+        className="btn btn-primary"
+        onClick={() => clickAction(clickValue)}
+      >
         +{clickValue}
       </button>
     );

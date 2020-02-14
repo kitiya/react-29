@@ -1,0 +1,30 @@
+header {
+  height: 8vh;
+  display: flex;
+
+  background: $white;
+  .navbar {
+    position: relative;
+    display: flex;
+    width: 80%;
+    margin: 0px auto;
+
+    .nav-item {
+      // font-family: $font-header;
+      // font-weight: map-get($font-weights, medium);
+      padding-bottom: 3px;
+      border-bottom: 2px solid $light;
+      color: $dark;
+      font-size: 1.25em;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+
+    .active-nav-item {
+      color: $secondary;
+      border-bottom: 2px solid;
+    }
+  }
+}
