@@ -14,7 +14,7 @@ const HeaderLink = ({ children, ...props }) => (
 
 const Header = () => {
   return (
-    <header>
+    <header id="main-header">
       <nav className="navbar">
         <HeaderLink className="nav-item" to="/">
           Home

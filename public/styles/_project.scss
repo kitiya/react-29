@@ -25,6 +25,14 @@
   border-radius: 50px;
 }
 
+.btn {
+  font-size: 1em;
+  line-height: 1;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 3px;
+}
+
 // project/index.html
 #projects {
   background: #e9f1f3;
@@ -395,6 +403,96 @@
         width: 100%;
         margin: 5px;
         padding: 10px;
+      }
+    }
+  }
+}
+
+.project-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 20px auto;
+  padding: 30px;
+  width: 50%;
+  border-radius: 50px;
+}
+
+#recipe-app {
+  $pcolor-primary: #159099;
+  $pcolor-secondary: #0052a7;
+  $pcolor-primary-dark: darken($pcolor-primary, 15%);
+  $pcolor-background: lighten(#ffeead, 15%);
+  @include mainContainer(100%);
+
+  font-family: $font-primary;
+
+  .project-header {
+    color: $pcolor-primary-dark;
+  }
+  .project-wrapper {
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 5px;
+
+    justify-content: center;
+
+    .search-form {
+      display: flex;
+      margin: 10px 0;
+
+      .search-text {
+        flex: 1;
+        margin: 0px;
+        padding: 10px;
+        border-radius: 3px;
+        border: 1px solid $pcolor-primary;
+      }
+
+      .search-btn {
+        font-size: 1em;
+        margin: 0px 5px 0px;
+        padding: 10px;
+        line-height: 1;
+        border-radius: 3px;
+        border: 1px solid $pcolor-primary;
+        vertical-align: middle;
+      }
+    }
+
+    .recipe-container {
+      display: flex;
+      flex-flow: row wrap;
+
+      .recipe-item-wrapper {
+        flex: 1 0 300px;
+        overflow: auto;
+        display: flex;
+        flex-flow: column wrap;
+        border-radius: 3px;
+        background: $color-white;
+        padding: 10px;
+        margin: 5px;
+
+        .recipe-calories {
+          margin: 10px 0;
+        }
+
+        .recipe-link {
+          align-self: center;
+        }
+        .recipe-image {
+          margin: 5px;
+          flex: 1 1 120px;
+
+          border: 1px solid lighten($color: $pcolor-primary, $amount: 60%);
+          border-radius: 3px;
+        }
+
+        .ingredient-wrapper {
+          .ingredient-item {
+            line-height: 1.5;
+          }
+        }
       }
     }
   }

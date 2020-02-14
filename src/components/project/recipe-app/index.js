@@ -46,16 +46,18 @@ const RecipeApp = () => {
             Search
           </button>
         </form>
-        {recipes.map((recipeItem, index) => (
-          <Recipe
-            key={index}
-            title={recipeItem.recipe.label}
-            calories={recipeItem.recipe.calories}
-            image={recipeItem.recipe.image}
-            externalUrl={recipeItem.recipe.url}
-            ingredients={recipeItem.recipe.ingredients}
-          />
-        ))}
+        <div className="recipe-container">
+          {recipes.map((recipeItem, index) => (
+            <Recipe
+              key={index}
+              title={recipeItem.recipe.label}
+              calories={recipeItem.recipe.calories}
+              image={recipeItem.recipe.image}
+              externalUrl={recipeItem.recipe.url}
+              ingredients={recipeItem.recipe.ingredients}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
