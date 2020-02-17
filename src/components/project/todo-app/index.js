@@ -2,21 +2,26 @@ import React, { useState } from "react";
 
 function Todo({ todo, index, completeTodo, removeTodo }) {
   return (
-    <div key={index} className="todo-item-wrapper">
+    <div key={index} className="row p-2">
       <label
-        className="todo-item"
+        className="col m-1 p-2 rounded border align-self-center text-left bg-light"
         style={{ textDecoration: todo.isCompleted ? "line-through" : "" }}
       >
         {todo.text}
       </label>
-      <div className="btn-wrapper">
-        <button className="btn" onClick={() => completeTodo(index)}>
-          complete
-        </button>
-        <button className="btn" onClick={() => removeTodo(index)} index={index}>
-          remove
-        </button>
-      </div>
+      <button
+        className="col-3 col-md-2 col-xl-1 btn btn-info m-1 "
+        onClick={() => completeTodo(index)}
+      >
+        complete
+      </button>
+      <button
+        className="col-3 col-md-2 col-xl-1 btn btn-info m-1"
+        onClick={() => removeTodo(index)}
+        index={index}
+      >
+        remove
+      </button>
     </div>
   );
 }
@@ -34,17 +39,17 @@ function TodoForm({ addTodo }) {
   };
 
   return (
-    <section className="input-wrapper">
-      <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
+      <section className="row mt-3">
         <input
           type="text"
-          className="input-text"
+          className="col form-control pt-3 pb-3 m-2 border border-info"
           value={value}
           placeholder="Add Todo..."
           onChange={e => setValue(e.target.value)}
         />
-      </form>
-    </section>
+      </section>
+    </form>
   );
 }
 
@@ -73,81 +78,20 @@ const TodoApp = () => {
     setTodos(newTodos);
   };
   return (
-    <main id="todo-app" className="project-container">
-      <h1 className="project-header">My Todo List</h1>
-      <div className="project-wrapper">
-        <section className="output-wrapper">
-          {todos.map((todo, index) => (
-            <Todo
-              key={index}
-              index={index}
-              todo={todo}
-              completeTodo={completeTodo}
-              removeTodo={removeTodo}
-            />
-          ))}
-        </section>
-        <TodoForm addTodo={addTodo} />
-      </div>
+    <main id="todo-app" className="container text-center">
+      <h1>My Todo List</h1>
+      {todos.map((todo, index) => (
+        <Todo
+          key={index}
+          index={index}
+          todo={todo}
+          completeTodo={completeTodo}
+          removeTodo={removeTodo}
+        />
+      ))}
+      <TodoForm addTodo={addTodo} />
     </main>
   );
 };
 
 export default TodoApp;
-
-/*
-import React, { useState, useEffect } from "react";
-
-const TodoApp = () => {
-  const [todos, setTodos] = useState([
-    { text: "Learn about React", isCompleted: false },
-    { text: "Meet friends for lunch", isCompleted: false },
-    { text: "Build a really cool TODO App", isCompleted: false }
-  ]);
-
-  const handleKeyDown = useEffect(
-    event => {
-      if (event) {
-        if (event.key === "Enter") {
-          const newItem = event.target.value;
-          todos.push(newItem);
-          setTodos(todos);
-        } else {
-          console.log("test");
-        }
-      }
-    },
-    [todos]
-  );
-
-  const todosView = todos => {
-    // console.log(todos);
-    return todos.map((item, index) => (
-      <div key={index} className="todo-item-wrapper">
-        <label className="todo-item">{item}</label>
-        <div className="btn-wrapper">
-          <button className="btn">complete</button>
-          <button className="btn">remove</button>
-        </div>
-        <br />
-      </div>
-    ));
-  };
-
-  return (
-    <main id="todo-app" className="project-container">
-      <h1 className="project-header">My Todo List</h1>
-      <div className="project-wrapper">
-        <section className="output-wrapper">{todosView(todos)}</section>
-        <section className="input-wrapper">
-          <label className="input-label">Add new</label>
-          <textarea className="input-text" onKeyDown={handleKeyDown} />
-        </section>
-      </div>
-    </main>
-  );
-};
-
-export default TodoApp;
-
-*/

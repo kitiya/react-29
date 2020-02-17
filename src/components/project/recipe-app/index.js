@@ -32,33 +32,33 @@ const RecipeApp = () => {
   };
 
   return (
-    <div id="recipe-app" className="project-container">
-      <h1 className="project-header">RECIPE FOR...{query.toUpperCase()}</h1>
-      <div className="project-wrapper">
-        <form onSubmit={submitSearchQuery} className="search-form">
+    <div id="recipe-app" className="container mt-3">
+      <h1>RECIPE FOR...{query.toUpperCase()}</h1>
+      <form onSubmit={submitSearchQuery}>
+        <div className="from-group row m-0">
           <input
-            className="search-text"
+            className="form-control col"
             type="text"
             value={search}
             onChange={updateSearch}
           />
-          <button type="submit" className="btn search-btn">
+          <button type="submit" className="btn btn-info col-2 ml-1">
             Search
           </button>
-        </form>
-        <div className="recipe-container">
-          {recipes.map((recipeItem, index) => (
-            <Recipe
-              key={index}
-              title={recipeItem.recipe.label}
-              calories={recipeItem.recipe.calories}
-              image={recipeItem.recipe.image}
-              externalUrl={recipeItem.recipe.url}
-              ingredients={recipeItem.recipe.ingredients}
-            />
-          ))}
         </div>
-      </div>
+      </form>
+      <section className="row m-0 justify-content-around">
+        {recipes.map((recipeItem, index) => (
+          <Recipe
+            key={index}
+            title={recipeItem.recipe.label}
+            calories={recipeItem.recipe.calories}
+            image={recipeItem.recipe.image}
+            externalUrl={recipeItem.recipe.url}
+            ingredients={recipeItem.recipe.ingredients}
+          />
+        ))}
+      </section>
     </div>
   );
 };

@@ -6,7 +6,7 @@ const BasicCounter = () => {
   const Button = ({ clickAction, clickValue }) => {
     return (
       <button
-        className="btn btn-primary"
+        className="btn btn-info col-4 col-md-2 m-1"
         onClick={() => clickAction(clickValue)}
       >
         +{clickValue}
@@ -23,20 +23,27 @@ const BasicCounter = () => {
   };
 
   return (
-    <main id="basic-counter" className="project-container">
-      <h1 className="project-header">Basic Counter</h1>
-      <section className="project-wrapper">
-        <div className="btn-wrapper">
+    <main id="basic-counter" className="container">
+      <h1 className="text-center">Basic Counter</h1>
+      <div className="container text-center p-3">
+        <section className="row justify-content-center ml-3 mr-3 ">
           <Button clickAction={incrementCounter} clickValue={1}></Button>
           <Button clickAction={incrementCounter} clickValue={5}></Button>
           <Button clickAction={incrementCounter} clickValue={10}></Button>
           <Button clickAction={incrementCounter} clickValue={100}></Button>
-        </div>
-        <lable>{counter}</lable>
-        <button className="btn" onClick={() => handleReset(10)}>
-          Reset
-        </button>
-      </section>
+        </section>
+        <section className="row justify-content-center m-3">
+          <label className="text-dark m-0">{counter}</label>
+        </section>
+        <section className="row justify-content-center">
+          <button
+            className="btn btn-success col-3"
+            onClick={() => handleReset(10)}
+          >
+            Reset
+          </button>
+        </section>
+      </div>
     </main>
   );
 };

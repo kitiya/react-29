@@ -30,18 +30,21 @@ const Stopwatch = () => {
   };
 
   return (
-    <main id="stopwatch" className="project-container">
-      <h1 className="project-header">Stopwatch</h1>
-      <section className="project-wrapper">
+    <main id="stopwatch" className="container text-center mt-3">
+      <h1 className="text-dark">Stopwatch</h1>
+      <section className="row justify-content-center m-3">
         <label>{lapse} s</label>
-        <div className="btn-wrapper">
-          <button className="btn" onClick={handleRunClick}>
-            {isRunning ? "Pause" : "Start"}
-          </button>
-          <button className="btn" onClick={handleClearClick}>
-            Clear
-          </button>
-        </div>
+      </section>
+      <section className="row justify-content-center m-3">
+        <button className="btn btn-info m-1 col-2" onClick={handleRunClick}>
+          {isRunning ? "Pause" : "Start"}
+        </button>
+        <button
+          className="btn btn-success m-1 col-2"
+          onClick={handleClearClick}
+        >
+          Clear
+        </button>
       </section>
     </main>
   );

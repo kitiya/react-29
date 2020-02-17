@@ -1,0 +1,18 @@
+#basic-counter label {
+  font-size: 42px;
+}
+
+#stopwatch label,
+#stopwatch span {
+  font-size: 42px;
+}
+
+#recipe-app .recipe-wrapper {
+  margin-left: -0.25rem !important;
+  margin-right: -0.25rem !important;
+}
+
+#recipe-app .recipe-wrapper .overflow-hidden {
+  overflow: hidden;
+}
+/*# sourceMappingURL=styles.css.map */
