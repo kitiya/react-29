@@ -27,7 +27,7 @@ const Routes = () => (
       <Route path="/project/artists/:id" component={ArtistItem} />
       <Route path="/project/todo-app" component={TodoApp} />
       <Route path="/project/recipe-app" component={RecipeApp} />
-      <Route path="/progect/tic-tac-toe" component={TicTacToe} />
+      <Route path="/project/tic-tac-toe" component={TicTacToe} />
       <Route path="/about" component={About} />
       <Route
         component={() => {
