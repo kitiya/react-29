@@ -9,23 +9,23 @@ const HeaderLink = ({ children, ...props }) => (
 
 const Header = () => {
   return (
-    <header>
+    <header className="mb-3">
       <nav className="navbar navbar-light bg-light">
         <div className="container">
           <a className="navbar-brand" href="/">
             K I T I YA
           </a>
-          <ul class="nav justify-content-end">
-            <li class="nav-item">
+          <ul className="nav justify-content-end">
+            <li className="nav-item">
               <HeaderLink to="/">Home</HeaderLink>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <HeaderLink to="/project">Project</HeaderLink>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <HeaderLink to="/game">Game</HeaderLink>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <HeaderLink to="/about">About</HeaderLink>
             </li>
           </ul>

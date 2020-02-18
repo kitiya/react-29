@@ -13,6 +13,7 @@ import ArtistItem from "./components/project/artist/artist-item";
 import TodoApp from "./components/project/todo-app";
 import RecipeApp from "./components/project/recipe-app";
 import Game from "./components/game";
+import TicTacToe from "./components/project/tic-tac-toe";
 import About from "./components/about";
 
 const Routes = () => (
@@ -27,6 +28,7 @@ const Routes = () => (
       <Route path="/project/artists/:id" component={ArtistItem} />
       <Route path="/project/todo-app" component={TodoApp} />
       <Route path="/project/recipe-app" component={RecipeApp} />
+      <Route path="/progect/tic-tac-toe" component={TicTacToe} />
       <Route exact path="/game" component={Game} />
       <Route path="/about" component={About} />
       <Route

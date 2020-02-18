@@ -15,4 +15,13 @@
 #recipe-app .recipe-wrapper .overflow-hidden {
   overflow: hidden;
 }
+
+#tic-tac-toe .square-button {
+  font-size: 36px;
+  min-height: 100px;
+}
+
+#tic-tac-toe .status {
+  font-size: 1.25rem;
+}
 /*# sourceMappingURL=styles.css.map */
