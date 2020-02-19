@@ -10,8 +10,12 @@ const renderProjects = () => {
         <Link to={`/project/${item.path}`} className="card m-2">
           <img
             src={`/images/project/${item.img}`}
-            className="card-img-top"
-            style={{ width: "20rem" }}
+            className="card-img-top p-0"
+            style={{
+              maxWidth: "20rem",
+              borderTopLeftRadius: "3px",
+              borderTopRightRadius: "3px"
+            }}
             alt="..."
           />
           <div className="card-body">

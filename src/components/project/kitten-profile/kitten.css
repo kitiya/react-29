@@ -1,0 +1,18 @@
+.kitten-wrapper {
+  min-height: 10vh;
+  cursor: pointer;
+  background: #ffdde1; /* fallback for old browsers */
+  background: linear-gradient(to right, #ebb1b8, #fcecee, #ebb1b8);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* transition: background-color 2s ease-in; */
+}
+
+.kitten-wrapper:hover {
+  background: linear-gradient(to right, #e69da6, #f9d6da, #e69da6);
+}
+
+img {
+  padding: 20px;
+  max-width: 100%;
+  max-height: 100%;
+}

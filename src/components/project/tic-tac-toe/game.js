@@ -39,12 +39,10 @@ const Game = () => {
   };
 
   const jumpTo = step => {
-    console.log(step);
+    // TODO: Update the screen
     setStepNumber(step);
     setXIsNext(step % 2 === 0);
   };
-
-  // const [moves, setMoves] = useState(null);
 
   const moves = history.map((step, move) => {
     const desc = move ? "Go to move #" + move : "Go to game start";

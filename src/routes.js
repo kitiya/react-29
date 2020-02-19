@@ -13,6 +13,7 @@ import ArtistItem from "./components/project/artist/artist-item";
 import TodoApp from "./components/project/todo-app";
 import RecipeApp from "./components/project/recipe-app";
 import TicTacToe from "./components/project/tic-tac-toe";
+import KittenProfile from "./components/project/kitten-profile";
 import About from "./components/about";
 
 const Routes = () => (
@@ -28,6 +29,7 @@ const Routes = () => (
       <Route path="/project/todo-app" component={TodoApp} />
       <Route path="/project/recipe-app" component={RecipeApp} />
       <Route path="/project/tic-tac-toe" component={TicTacToe} />
+      <Route path="/project/kitten-profile" component={KittenProfile} />
       <Route path="/about" component={About} />
       <Route
         component={() => {

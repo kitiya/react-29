@@ -24,4 +24,8 @@
 #tic-tac-toe .status {
   font-size: 1.25rem;
 }
+
+.kty-overflow-hidden {
+  overflow: hidden;
+}
 /*# sourceMappingURL=styles.css.map */
