@@ -6,7 +6,7 @@ const Kittens = ({ kittens }) => {
     return (
       <div className="row ">
         {kittens.map(kitten => (
-          <Kitten kitten={kitten} />
+          <Kitten key={kitten.id} kitten={kitten} />
         ))}
       </div>
     );
