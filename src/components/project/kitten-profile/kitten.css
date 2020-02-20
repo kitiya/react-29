@@ -1,3 +1,30 @@
+/* INDEX.JS */
+.kitten-profile-container {
+  margin-top: -1rem;
+  background: #c31432; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #240b36,
+    #4f3b5e,
+    #c31432
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #240b36,
+    #4f3b5e,
+    #c31432
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.kitten-profile-header {
+  padding: 1rem 0rem;
+  color: #fff;
+}
+
+.searchbox-container {
+  padding: 0 0.25rem;
+}
+/* KITTEN.JS */
 .kitten-wrapper {
   min-height: 10vh;
   cursor: pointer;

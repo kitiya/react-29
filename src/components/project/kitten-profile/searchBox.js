@@ -2,7 +2,7 @@ import React from "react";
 
 const SearchBox = ({ placeholder, handleChange }) => {
   return (
-    <div className="form-group p-1">
+    <div className="form-group">
       <input
         className="form-control"
         placeholder={placeholder}

@@ -34,12 +34,14 @@ const KittenProfile = () => {
   };
 
   return (
-    <div className="container text-center">
-      <h1>KITTEN PROFILE</h1>
-      <SearchBox
-        placeholder="Search kittens"
-        handleChange={handleSearchChange}
-      />
+    <div className="container-fluid text-center kitten-profile-container">
+      <h1 className="kitten-profile-header">Kitten Profile</h1>
+      <div className="container searchbox-container">
+        <SearchBox
+          placeholder="Search kittens"
+          handleChange={handleSearchChange}
+        />
+      </div>
       <Kittens kittens={filteredKittens} />
     </div>
   );

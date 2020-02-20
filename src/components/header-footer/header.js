@@ -13,7 +13,7 @@ const Header = () => {
       <nav className="navbar navbar-light bg-light">
         <div className="container">
           <a className="navbar-brand" href="/">
-            K I T I Y A
+            <span className="kty-brand-logo">KITIYA</span>
           </a>
           <ul className="nav justify-content-end">
             <li className="nav-item">
