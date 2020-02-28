@@ -7,7 +7,7 @@ const renderProjects = () => {
   return (
     <section className="d-flex flex-wrap justify-content-center">
       {projectDb.map((item, index) => (
-        <Link to={`/project/${item.path}`} className="card m-2">
+        <Link key={index} to={`/project/${item.path}`} className="card m-2">
           <img
             src={`/images/project/${item.img}`}
             className="card-img-top p-0"

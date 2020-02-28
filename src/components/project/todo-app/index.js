@@ -43,7 +43,7 @@ function TodoForm({ addTodo }) {
       <section className="row mt-3">
         <input
           type="text"
-          className="col form-control pt-3 pb-3 m-2 border border-info"
+          className="col form-control py-3 mx-2 my-3 border border-info"
           value={value}
           placeholder="Add Todo..."
           onChange={e => setValue(e.target.value)}
@@ -80,6 +80,7 @@ const TodoApp = () => {
   return (
     <main id="todo-app" className="container text-center">
       <h1>My Todo List</h1>
+      <TodoForm addTodo={addTodo} />
       {todos.map((todo, index) => (
         <Todo
           key={index}
@@ -89,7 +90,6 @@ const TodoApp = () => {
           removeTodo={removeTodo}
         />
       ))}
-      <TodoForm addTodo={addTodo} />
     </main>
   );
 };

@@ -21,7 +21,7 @@ const Recipe = ({ title, calories, image, externalUrl, ingredients }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className="round" alt="recipe" src={image} />
+            <img className="round" alt="recipe" src={image} secure="true" />
           </a>
         </div>
         <p className="row text-left m-2 pl-3">
