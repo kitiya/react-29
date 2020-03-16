@@ -15,6 +15,8 @@ import RecipeApp from "./components/project/recipe-app";
 import TicTacToe from "./components/project/tic-tac-toe";
 import KittenProfile from "./components/project/kitten-profile";
 import About from "./components/about";
+import ExpenseTracker from "./components/project/expense-tracker";
+import StarWarsApi from "./components/project/star-wars-api";
 
 const Routes = () => (
   <BrowserRouter>
@@ -30,6 +32,8 @@ const Routes = () => (
       <Route path="/project/recipe-app" component={RecipeApp} />
       <Route path="/project/tic-tac-toe" component={TicTacToe} />
       <Route path="/project/kitten-profile" component={KittenProfile} />
+      <Route path="/project/expense-tracker" component={ExpenseTracker} />
+      <Route path="/project/star-wars-api" component={StarWarsApi} />
       <Route path="/about" component={About} />
       <Route
         component={() => {

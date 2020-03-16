@@ -1,5 +1,19 @@
 export const PROJECT_DB = [
   {
+    title: "Star Wars API",
+    img: "star-wars-api.jpg",
+    path: "star-wars-api",
+    date: "2020-03-15",
+    tag: ["all", "react-hooks"]
+  },
+  {
+    title: "Expense Tracker",
+    img: "expense-tracker.jpg",
+    path: "expense-tracker",
+    date: "2020-03-02",
+    tag: ["all", "redux"]
+  },
+  {
     title: "Kitten Profile",
     img: "kitten-profile.jpg",
     path: "kitten-profile",
