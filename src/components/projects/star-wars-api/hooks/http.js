@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export const useHttp = (url, dependencies) => {
+export const useHttp = (url) => {
   const [isLoading, setIsLoading] = useState(false);
   const [fetchData, setFetchData] = useState(null);
 
@@ -8,23 +8,23 @@ export const useHttp = (url, dependencies) => {
     setIsLoading(true);
     console.log("sending http request", url);
     fetch(url)
-      .then(response => {
+      .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch");
         }
 
         return response.json();
       })
-      .then(data => {
+      .then((data) => {
         console.log(data);
         setIsLoading(false);
         setFetchData(data);
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
         setIsLoading(false);
       });
-  }, [...dependencies, url]);
+  }, [url]);
 
   return [isLoading, fetchData];
 };
