@@ -2,16 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ArtistDB from "./artist-db";
 
-const artistList = artists => {
+const artistList = (artists) => {
   return artists
-    ? artists.map(item => (
+    ? artists.map((item) => (
         <Link
           key={item.id}
-          to={`/project/artists/${item.id}`}
+          to={`/projects/artists/${item.id}`}
           className="profile-image"
           style={{
             background: `url('../images/artist/covers/${item.cover}.jpg') no-repeat`,
-            backgroundSize: "cover"
+            backgroundSize: "cover",
           }}
         >
           <div className="profile-image-header-wrapper">

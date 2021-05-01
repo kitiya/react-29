@@ -1,20 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { PROJECT_DB } from "../project/project-db";
+import { PROJECT_DB } from "../projects/project-db";
 
 const renderProjects = () => {
   const projectDb = PROJECT_DB;
   return (
     <section className="d-flex flex-wrap justify-content-center">
       {projectDb.map((item, index) => (
-        <Link key={index} to={`/project/${item.path}`} className="card m-2">
+        <Link key={index} to={`/projects/${item.path}`} className="card m-2">
           <img
-            src={`/images/project/${item.img}`}
+            src={`/images/projects/${item.img}`}
             className="card-img-top p-0"
             style={{
               maxWidth: "20rem",
               borderTopLeftRadius: "3px",
-              borderTopRightRadius: "3px"
+              borderTopRightRadius: "3px",
             }}
             alt="..."
           />

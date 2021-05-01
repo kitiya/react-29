@@ -14,7 +14,7 @@ const BasicCounter = () => {
     );
   };
 
-  const incrementCounter = increment => {
+  const incrementCounter = (increment) => {
     setCounter(counter + increment);
   };
 
